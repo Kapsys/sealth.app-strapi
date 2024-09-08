@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_small_component_menu_items",
+  "info": {
+    "displayName": "Menu Items",
+    "icon": "earth",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "menuItemName": {
+      "type": "string"
+    },
+    "menuItemLink": {
+      "type": "string"
+    }
+  }
+}

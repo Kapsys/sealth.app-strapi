@@ -15,7 +15,9 @@
     "dynamicSections": {
       "type": "dynamiczone",
       "components": [
-        "section.hero-section"
+        "section.hero-section",
+        "section.partner-logos-section",
+        "section.sealth-app-section"
       ]
     },
     "seo": {

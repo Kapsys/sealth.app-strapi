@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_section_partner_logos_sections",
+  "info": {
+    "displayName": "Partner Logos Section",
+    "icon": "medium",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logosSection": {
+      "displayName": "Logos Section",
+      "type": "component",
+      "repeatable": true,
+      "component": "small-component.logos-section"
+    }
+  }
+}

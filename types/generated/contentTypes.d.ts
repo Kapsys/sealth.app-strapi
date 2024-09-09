@@ -340,7 +340,9 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    dynamicSections: Attribute.DynamicZone<['section.hero-section']>;
+    dynamicSections: Attribute.DynamicZone<
+      ['section.hero-section', 'section.partner-logos-section', 'section.sealth-app-section']
+    >;
     seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

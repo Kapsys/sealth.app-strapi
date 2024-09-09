@@ -55,6 +55,18 @@ export interface SmallComponentMenuItems extends Schema.Component {
   };
 }
 
+export interface SmallComponentLogosSection extends Schema.Component {
+  collectionName: 'components_small_component_logos_sections';
+  info: {
+    displayName: 'Logos Section';
+    icon: 'file';
+  };
+  attributes: {
+    partnerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Attribute.Text;
+  };
+}
+
 export interface SmallComponentFooterContact extends Schema.Component {
   collectionName: 'components_small_component_footer_contacts';
   info: {
@@ -141,6 +153,33 @@ export interface SharedMetaSocial extends Schema.Component {
   };
 }
 
+export interface SectionSealthAppSection extends Schema.Component {
+  collectionName: 'components_section_sealth_app_sections';
+  info: {
+    displayName: 'Sealth App Section';
+    icon: 'grid';
+  };
+  attributes: {
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    underlinedText: Attribute.String;
+    appImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SectionPartnerLogosSection extends Schema.Component {
+  collectionName: 'components_section_partner_logos_sections';
+  info: {
+    displayName: 'Partner Logos Section';
+    icon: 'medium';
+    description: '';
+  };
+  attributes: {
+    logosSection: Attribute.Component<'small-component.logos-section', true>;
+  };
+}
+
 export interface SectionHeroSection extends Schema.Component {
   collectionName: 'components_section_hero_sections';
   info: {
@@ -194,11 +233,14 @@ declare module '@strapi/types' {
       'small-component.social-icons': SmallComponentSocialIcons;
       'small-component.newsletter-subscription': SmallComponentNewsletterSubscription;
       'small-component.menu-items': SmallComponentMenuItems;
+      'small-component.logos-section': SmallComponentLogosSection;
       'small-component.footer-contact': SmallComponentFooterContact;
       'small-component.button': SmallComponentButton;
       'small-component.address-items': SmallComponentAddressItems;
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
+      'section.sealth-app-section': SectionSealthAppSection;
+      'section.partner-logos-section': SectionPartnerLogosSection;
       'section.hero-section': SectionHeroSection;
       'section.header': SectionHeader;
       'section.footer': SectionFooter;

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_section_sealth_app_sections",
+  "info": {
+    "displayName": "Sealth App Section",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "underlinedText": {
+      "type": "string"
+    },
+    "appImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

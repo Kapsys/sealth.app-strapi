@@ -316,6 +316,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
   };
   attributes: {
     header: Attribute.Component<'section.header'>;
+    footer: Attribute.Component<'section.footer'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

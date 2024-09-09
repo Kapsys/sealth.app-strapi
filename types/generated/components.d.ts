@@ -90,6 +90,17 @@ export interface SectionHeader extends Schema.Component {
   };
 }
 
+export interface SectionFooter extends Schema.Component {
+  collectionName: 'components_section_footers';
+  info: {
+    displayName: 'Footer';
+    icon: 'collapse';
+  };
+  attributes: {
+    footerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -98,6 +109,7 @@ declare module '@strapi/types' {
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
       'section.header': SectionHeader;
+      'section.footer': SectionFooter;
     }
   }
 }

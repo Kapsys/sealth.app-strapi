@@ -25,7 +25,6 @@
       "component": "small-component.menu-items"
     },
     "button": {
-      "displayName": "Button",
       "type": "component",
       "repeatable": false,
       "component": "small-component.button"

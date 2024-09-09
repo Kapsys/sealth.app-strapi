@@ -2,19 +2,42 @@
   "collectionName": "components_section_footers",
   "info": {
     "displayName": "Footer",
-    "icon": "collapse"
+    "icon": "collapse",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "footerLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "footerDescription": {
+      "type": "text"
+    },
+    "footerContact": {
+      "displayName": "Footer Contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "small-component.footer-contact"
+    },
+    "newsletterSubscription": {
+      "displayName": "Newsletter Subscription ",
+      "type": "component",
+      "repeatable": false,
+      "component": "small-component.newsletter-subscription"
+    },
+    "socialIcons": {
+      "displayName": "Social Icons",
+      "type": "component",
+      "repeatable": false,
+      "component": "small-component.social-icons"
     }
   }
 }

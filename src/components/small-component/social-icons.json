@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_small_component_social_icons",
+  "info": {
+    "displayName": "Social Icons",
+    "icon": "twitter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "iconLink": {
+      "type": "string"
+    }
+  }
+}

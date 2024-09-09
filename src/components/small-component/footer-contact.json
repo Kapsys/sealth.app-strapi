@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_small_component_footer_contacts",
+  "info": {
+    "displayName": "Footer Contact",
+    "icon": "moon"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "addressItems": {
+      "displayName": "Address Items",
+      "type": "component",
+      "repeatable": true,
+      "component": "small-component.address-items"
+    }
+  }
+}

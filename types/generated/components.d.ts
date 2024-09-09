@@ -1,5 +1,46 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SmallComponentSpecifications extends Schema.Component {
+  collectionName: 'components_small_component_specifications';
+  info: {
+    displayName: 'Specifications';
+    icon: 'check';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface SmallComponentSocialIcons extends Schema.Component {
+  collectionName: 'components_small_component_social_icons';
+  info: {
+    displayName: 'Social Icons';
+    icon: 'twitter';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    iconLink: Attribute.String;
+  };
+}
+
+export interface SmallComponentNewsletterSubscription extends Schema.Component {
+  collectionName: 'components_small_component_newsletter_subscription_s';
+  info: {
+    displayName: 'Newsletter Subscription ';
+    icon: 'envelop';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subscriptionPlaceholder: Attribute.String;
+    button: Attribute.Component<'small-component.button'>;
+  };
+}
+
 export interface SmallComponentMenuItems extends Schema.Component {
   collectionName: 'components_small_component_menu_items';
   info: {
@@ -14,6 +55,18 @@ export interface SmallComponentMenuItems extends Schema.Component {
   };
 }
 
+export interface SmallComponentFooterContact extends Schema.Component {
+  collectionName: 'components_small_component_footer_contacts';
+  info: {
+    displayName: 'Footer Contact';
+    icon: 'moon';
+  };
+  attributes: {
+    title: Attribute.String;
+    addressItems: Attribute.Component<'small-component.address-items', true>;
+  };
+}
+
 export interface SmallComponentButton extends Schema.Component {
   collectionName: 'components_small_component_buttons';
   info: {
@@ -23,6 +76,18 @@ export interface SmallComponentButton extends Schema.Component {
   attributes: {
     buttonName: Attribute.String;
     buttonUrl: Attribute.String;
+  };
+}
+
+export interface SmallComponentAddressItems extends Schema.Component {
+  collectionName: 'components_small_component_address_items';
+  info: {
+    displayName: 'Address Items';
+    icon: 'stack';
+  };
+  attributes: {
+    text: Attribute.String;
+    link: Attribute.String;
   };
 }
 
@@ -76,6 +141,22 @@ export interface SharedMetaSocial extends Schema.Component {
   };
 }
 
+export interface SectionHeroSection extends Schema.Component {
+  collectionName: 'components_section_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+    icon: 'strikeThrough';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'small-component.button'>;
+    backgroundImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    specifications: Attribute.Component<'small-component.specifications', true>;
+  };
+}
+
 export interface SectionHeader extends Schema.Component {
   collectionName: 'components_section_headers';
   info: {
@@ -95,19 +176,30 @@ export interface SectionFooter extends Schema.Component {
   info: {
     displayName: 'Footer';
     icon: 'collapse';
+    description: '';
   };
   attributes: {
     footerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    footerDescription: Attribute.Text;
+    footerContact: Attribute.Component<'small-component.footer-contact'>;
+    newsletterSubscription: Attribute.Component<'small-component.newsletter-subscription'>;
+    socialIcons: Attribute.Component<'small-component.social-icons'>;
   };
 }
 
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'small-component.specifications': SmallComponentSpecifications;
+      'small-component.social-icons': SmallComponentSocialIcons;
+      'small-component.newsletter-subscription': SmallComponentNewsletterSubscription;
       'small-component.menu-items': SmallComponentMenuItems;
+      'small-component.footer-contact': SmallComponentFooterContact;
       'small-component.button': SmallComponentButton;
+      'small-component.address-items': SmallComponentAddressItems;
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
+      'section.hero-section': SectionHeroSection;
       'section.header': SectionHeader;
       'section.footer': SectionFooter;
     }

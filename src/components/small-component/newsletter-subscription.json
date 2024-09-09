@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_small_component_newsletter_subscription_s",
+  "info": {
+    "displayName": "Newsletter Subscription ",
+    "icon": "envelop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "subscriptionPlaceholder": {
+      "type": "string"
+    },
+    "button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "small-component.button"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_small_component_specifications",
+  "info": {
+    "displayName": "Specifications",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_small_component_address_items",
+  "info": {
+    "displayName": "Address Items",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

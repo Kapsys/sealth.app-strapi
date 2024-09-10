@@ -341,7 +341,15 @@ export interface ApiPagePage extends Schema.CollectionType {
   };
   attributes: {
     dynamicSections: Attribute.DynamicZone<
-      ['section.hero-section', 'section.partner-logos-section', 'section.sealth-app-section']
+      [
+        'section.hero-section',
+        'section.partner-logos-section',
+        'section.sealth-app-section',
+        'section.blog-section',
+        'section.newsletter-section',
+        'section.sealth-made-section',
+        'section.slider-section'
+      ]
     >;
     seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;

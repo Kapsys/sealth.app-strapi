@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_slider_sections",
+  "info": {
+    "displayName": "Slider Section",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "slider": {
+      "displayName": "Slider",
+      "type": "component",
+      "repeatable": true,
+      "component": "small-component.slider"
+    }
+  }
+}

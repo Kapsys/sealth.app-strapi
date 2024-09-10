@@ -17,7 +17,11 @@
       "components": [
         "section.hero-section",
         "section.partner-logos-section",
-        "section.sealth-app-section"
+        "section.sealth-app-section",
+        "section.blog-section",
+        "section.newsletter-section",
+        "section.sealth-made-section",
+        "section.slider-section"
       ]
     },
     "seo": {

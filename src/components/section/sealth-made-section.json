@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_section_sealth_made_sections",
+  "info": {
+    "displayName": "Sealth Made Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "underlinedText": {
+      "type": "string"
+    },
+    "list": {
+      "displayName": "List",
+      "type": "component",
+      "repeatable": true,
+      "component": "small-component.list"
+    }
+  }
+}

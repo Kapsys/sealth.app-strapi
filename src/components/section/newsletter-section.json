@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_section_newsletter_sections",
+  "info": {
+    "displayName": "Newsletter Section",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "newsletterSubscription": {
+      "displayName": "Newsletter Subscription ",
+      "type": "component",
+      "repeatable": false,
+      "component": "small-component.newsletter-subscription"
+    }
+  }
+}

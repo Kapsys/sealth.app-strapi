@@ -26,6 +26,23 @@ export interface SmallComponentSocialIcons extends Schema.Component {
   };
 }
 
+export interface SmallComponentSlider extends Schema.Component {
+  collectionName: 'components_small_component_sliders';
+  info: {
+    displayName: 'Slider';
+    icon: 'dashboard';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Attribute.String;
+    position: Attribute.String;
+    testimonial: Attribute.Text;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface SmallComponentNewsletterSubscription extends Schema.Component {
   collectionName: 'components_small_component_newsletter_subscription_s';
   info: {
@@ -64,6 +81,18 @@ export interface SmallComponentLogosSection extends Schema.Component {
   attributes: {
     partnerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     link: Attribute.Text;
+  };
+}
+
+export interface SmallComponentList extends Schema.Component {
+  collectionName: 'components_small_component_lists';
+  info: {
+    displayName: 'List';
+    icon: 'oneToMany';
+  };
+  attributes: {
+    icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Attribute.String;
   };
 }
 
@@ -153,6 +182,30 @@ export interface SharedMetaSocial extends Schema.Component {
   };
 }
 
+export interface SectionSliderSection extends Schema.Component {
+  collectionName: 'components_section_slider_sections';
+  info: {
+    displayName: 'Slider Section';
+    icon: 'cog';
+  };
+  attributes: {
+    slider: Attribute.Component<'small-component.slider', true>;
+  };
+}
+
+export interface SectionSealthMadeSection extends Schema.Component {
+  collectionName: 'components_section_sealth_made_sections';
+  info: {
+    displayName: 'Sealth Made Section';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    underlinedText: Attribute.String;
+    list: Attribute.Component<'small-component.list', true>;
+  };
+}
+
 export interface SectionSealthAppSection extends Schema.Component {
   collectionName: 'components_section_sealth_app_sections';
   info: {
@@ -177,6 +230,19 @@ export interface SectionPartnerLogosSection extends Schema.Component {
   };
   attributes: {
     logosSection: Attribute.Component<'small-component.logos-section', true>;
+  };
+}
+
+export interface SectionNewsletterSection extends Schema.Component {
+  collectionName: 'components_section_newsletter_sections';
+  info: {
+    displayName: 'Newsletter Section';
+    icon: 'envelop';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    newsletterSubscription: Attribute.Component<'small-component.newsletter-subscription'>;
   };
 }
 
@@ -226,24 +292,41 @@ export interface SectionFooter extends Schema.Component {
   };
 }
 
+export interface SectionBlogSection extends Schema.Component {
+  collectionName: 'components_section_blog_sections';
+  info: {
+    displayName: 'Blog Section';
+    icon: 'filter';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'small-component.specifications': SmallComponentSpecifications;
       'small-component.social-icons': SmallComponentSocialIcons;
+      'small-component.slider': SmallComponentSlider;
       'small-component.newsletter-subscription': SmallComponentNewsletterSubscription;
       'small-component.menu-items': SmallComponentMenuItems;
       'small-component.logos-section': SmallComponentLogosSection;
+      'small-component.list': SmallComponentList;
       'small-component.footer-contact': SmallComponentFooterContact;
       'small-component.button': SmallComponentButton;
       'small-component.address-items': SmallComponentAddressItems;
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
+      'section.slider-section': SectionSliderSection;
+      'section.sealth-made-section': SectionSealthMadeSection;
       'section.sealth-app-section': SectionSealthAppSection;
       'section.partner-logos-section': SectionPartnerLogosSection;
+      'section.newsletter-section': SectionNewsletterSection;
       'section.hero-section': SectionHeroSection;
       'section.header': SectionHeader;
       'section.footer': SectionFooter;
+      'section.blog-section': SectionBlogSection;
     }
   }
 }

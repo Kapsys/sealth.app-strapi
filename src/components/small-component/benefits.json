@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_small_component_benefits",
+  "info": {
+    "displayName": "Benefits",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "benefitImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "benefitTitle": {
+      "type": "string"
+    },
+    "benefitDescription": {
+      "type": "text"
+    }
+  }
+}

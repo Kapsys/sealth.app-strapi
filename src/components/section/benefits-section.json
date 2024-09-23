@@ -1,7 +1,8 @@
 {
-  "collectionName": "components_section_sealth_made_sections",
+  "collectionName": "components_section_benefits_sections",
   "info": {
-    "displayName": "Sealth Made Section",
+    "displayName": "Benefits Section",
+    "icon": "write",
     "description": ""
   },
   "options": {},
@@ -9,14 +10,11 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "list": {
-      "displayName": "List",
+    "benefits": {
+      "displayName": "Benefits",
       "type": "component",
       "repeatable": true,
-      "component": "small-component.list"
+      "component": "small-component.benefits"
     },
     "button": {
       "type": "component",

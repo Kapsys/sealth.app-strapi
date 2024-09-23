@@ -120,6 +120,20 @@ export interface SmallComponentButton extends Schema.Component {
   };
 }
 
+export interface SmallComponentBenefits extends Schema.Component {
+  collectionName: 'components_small_component_benefits';
+  info: {
+    displayName: 'Benefits';
+    icon: 'code';
+    description: '';
+  };
+  attributes: {
+    benefitImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    benefitTitle: Attribute.String;
+    benefitDescription: Attribute.Text;
+  };
+}
+
 export interface SmallComponentAddressItems extends Schema.Component {
   collectionName: 'components_small_component_address_items';
   info: {
@@ -197,12 +211,13 @@ export interface SectionSealthMadeSection extends Schema.Component {
   collectionName: 'components_section_sealth_made_sections';
   info: {
     displayName: 'Sealth Made Section';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    underlinedText: Attribute.String;
     list: Attribute.Component<'small-component.list', true>;
+    button: Attribute.Component<'small-component.button'>;
   };
 }
 
@@ -303,6 +318,20 @@ export interface SectionBlogSection extends Schema.Component {
   };
 }
 
+export interface SectionBenefitsSection extends Schema.Component {
+  collectionName: 'components_section_benefits_sections';
+  info: {
+    displayName: 'Benefits Section';
+    icon: 'write';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    benefits: Attribute.Component<'small-component.benefits', true>;
+    button: Attribute.Component<'small-component.button'>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -315,6 +344,7 @@ declare module '@strapi/types' {
       'small-component.list': SmallComponentList;
       'small-component.footer-contact': SmallComponentFooterContact;
       'small-component.button': SmallComponentButton;
+      'small-component.benefits': SmallComponentBenefits;
       'small-component.address-items': SmallComponentAddressItems;
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
@@ -327,6 +357,7 @@ declare module '@strapi/types' {
       'section.header': SectionHeader;
       'section.footer': SectionFooter;
       'section.blog-section': SectionBlogSection;
+      'section.benefits-section': SectionBenefitsSection;
     }
   }
 }

@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "heroSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.hero-section"
+    },
+    "partnerLogosSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.partner-logos-section"
+    },
+    "sealthAppSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.sealth-app-section"
+    },
+    "BenefitsSection": {
+      "displayName": "Benefits Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.benefits-section"
+    },
+    "sealthMadeSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.sealth-made-section"
+    },
+    "sliderSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.slider-section"
+    }
+  }
+}

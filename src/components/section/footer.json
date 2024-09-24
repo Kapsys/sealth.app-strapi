@@ -38,6 +38,11 @@
       "type": "component",
       "repeatable": false,
       "component": "small-component.social-icons"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "small-component.button"
     }
   }
 }

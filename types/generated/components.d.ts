@@ -1,5 +1,19 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SmallComponentSteps extends Schema.Component {
+  collectionName: 'components_small_component_steps';
+  info: {
+    displayName: 'Steps';
+    icon: 'stack';
+    description: '';
+  };
+  attributes: {
+    stepNumber: Attribute.String;
+    stepTitle: Attribute.String;
+    stepDescription: Attribute.Text;
+  };
+}
+
 export interface SmallComponentSpecifications extends Schema.Component {
   collectionName: 'components_small_component_specifications';
   info: {
@@ -196,6 +210,32 @@ export interface SharedMetaSocial extends Schema.Component {
   };
 }
 
+export interface SectionVideoSection extends Schema.Component {
+  collectionName: 'components_section_video_sections';
+  info: {
+    displayName: 'Video Section';
+    icon: 'monitor';
+    description: '';
+  };
+  attributes: {
+    videoUrl: Attribute.Text;
+  };
+}
+
+export interface SectionStepsSection extends Schema.Component {
+  collectionName: 'components_section_steps_sections';
+  info: {
+    displayName: 'Steps Section';
+    icon: 'layer';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    steps: Attribute.Component<'small-component.steps', true>;
+    button: Attribute.Component<'small-component.button'>;
+  };
+}
+
 export interface SectionSliderSection extends Schema.Component {
   collectionName: 'components_section_slider_sections';
   info: {
@@ -236,6 +276,21 @@ export interface SectionSealthAppSection extends Schema.Component {
   };
 }
 
+export interface SectionReminderSection extends Schema.Component {
+  collectionName: 'components_section_reminder_sections';
+  info: {
+    displayName: 'Reminder Section';
+    icon: 'dashboard';
+    description: '';
+  };
+  attributes: {
+    reminderImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
+    list: Attribute.Component<'small-component.list', true>;
+    underlinedText: Attribute.String;
+  };
+}
+
 export interface SectionPartnerLogosSection extends Schema.Component {
   collectionName: 'components_section_partner_logos_sections';
   info: {
@@ -245,6 +300,19 @@ export interface SectionPartnerLogosSection extends Schema.Component {
   };
   attributes: {
     logosSection: Attribute.Component<'small-component.logos-section', true>;
+  };
+}
+
+export interface SectionPaperworkSection extends Schema.Component {
+  collectionName: 'components_section_paperwork_sections';
+  info: {
+    displayName: 'Paperwork Section';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    underlinedText: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -287,7 +355,7 @@ export interface SectionHeader extends Schema.Component {
   attributes: {
     headerlogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     menuItems: Attribute.Component<'small-component.menu-items', true>;
-    button: Attribute.Component<'small-component.button'>;
+    notification: Attribute.Text;
   };
 }
 
@@ -304,6 +372,33 @@ export interface SectionFooter extends Schema.Component {
     footerContact: Attribute.Component<'small-component.footer-contact'>;
     newsletterSubscription: Attribute.Component<'small-component.newsletter-subscription'>;
     socialIcons: Attribute.Component<'small-component.social-icons'>;
+    button: Attribute.Component<'small-component.button'>;
+  };
+}
+
+export interface SectionFaqSection extends Schema.Component {
+  collectionName: 'components_section_faq_sections';
+  info: {
+    displayName: 'Faq Section';
+    icon: 'plus';
+  };
+  attributes: {
+    faqAnswer: Attribute.Text;
+    faqQuestion: Attribute.Text;
+  };
+}
+
+export interface SectionCtaSection extends Schema.Component {
+  collectionName: 'components_section_cta_sections';
+  info: {
+    displayName: 'CTA Section';
+    icon: 'phone';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'small-component.button'>;
   };
 }
 
@@ -335,6 +430,7 @@ export interface SectionBenefitsSection extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'small-component.steps': SmallComponentSteps;
       'small-component.specifications': SmallComponentSpecifications;
       'small-component.social-icons': SmallComponentSocialIcons;
       'small-component.slider': SmallComponentSlider;
@@ -348,14 +444,20 @@ declare module '@strapi/types' {
       'small-component.address-items': SmallComponentAddressItems;
       'shared.seo': SharedSeo;
       'shared.meta-social': SharedMetaSocial;
+      'section.video-section': SectionVideoSection;
+      'section.steps-section': SectionStepsSection;
       'section.slider-section': SectionSliderSection;
       'section.sealth-made-section': SectionSealthMadeSection;
       'section.sealth-app-section': SectionSealthAppSection;
+      'section.reminder-section': SectionReminderSection;
       'section.partner-logos-section': SectionPartnerLogosSection;
+      'section.paperwork-section': SectionPaperworkSection;
       'section.newsletter-section': SectionNewsletterSection;
       'section.hero-section': SectionHeroSection;
       'section.header': SectionHeader;
       'section.footer': SectionFooter;
+      'section.faq-section': SectionFaqSection;
+      'section.cta-section': SectionCtaSection;
       'section.blog-section': SectionBlogSection;
       'section.benefits-section': SectionBenefitsSection;
     }

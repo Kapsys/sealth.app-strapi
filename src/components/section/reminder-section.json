@@ -1,13 +1,13 @@
 {
-  "collectionName": "components_section_headers",
+  "collectionName": "components_section_reminder_sections",
   "info": {
-    "displayName": "Header",
-    "icon": "filter",
+    "displayName": "Reminder Section",
+    "icon": "dashboard",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "headerlogo": {
+    "reminderImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -18,14 +18,16 @@
         "audios"
       ]
     },
-    "menuItems": {
-      "displayName": "Menu Items",
+    "title": {
+      "type": "string"
+    },
+    "list": {
       "type": "component",
       "repeatable": true,
-      "component": "small-component.menu-items"
+      "component": "small-component.list"
     },
-    "notification": {
-      "type": "text"
+    "underlinedText": {
+      "type": "string"
     }
   }
 }

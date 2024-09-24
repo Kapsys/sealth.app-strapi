@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_section_faq_sections",
+  "info": {
+    "displayName": "Faq Section",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "faqAnswer": {
+      "type": "text"
+    },
+    "faqQuestion": {
+      "type": "text"
+    }
+  }
+}

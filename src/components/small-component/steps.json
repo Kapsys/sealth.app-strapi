@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_small_component_steps",
+  "info": {
+    "displayName": "Steps",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "stepNumber": {
+      "type": "string"
+    },
+    "stepTitle": {
+      "type": "string"
+    },
+    "stepDescription": {
+      "type": "text"
+    }
+  }
+}

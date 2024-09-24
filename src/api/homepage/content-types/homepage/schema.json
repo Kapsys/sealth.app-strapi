@@ -12,12 +12,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
     "slug": {
-      "type": "uid",
-      "targetField": "title"
+      "type": "uid"
     },
     "heroSection": {
       "type": "component",
@@ -49,6 +45,42 @@
       "type": "component",
       "repeatable": false,
       "component": "section.slider-section"
+    },
+    "stepsSection": {
+      "displayName": "Steps Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.steps-section"
+    },
+    "videoSection": {
+      "displayName": "Video Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.video-section"
+    },
+    "paperworkSection": {
+      "displayName": "Paperwork Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.paperwork-section"
+    },
+    "faqSection": {
+      "displayName": "Faq Section",
+      "type": "component",
+      "repeatable": true,
+      "component": "section.faq-section"
+    },
+    "ctaSection": {
+      "displayName": "CTA Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.cta-section"
+    },
+    "reminderSection": {
+      "displayName": "Reminder Section",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.reminder-section"
     }
   }
 }

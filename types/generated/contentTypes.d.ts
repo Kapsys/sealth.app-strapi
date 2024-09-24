@@ -954,14 +954,19 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    slug: Attribute.UID<'api::homepage.homepage', 'title'>;
+    slug: Attribute.UID;
     heroSection: Attribute.Component<'section.hero-section'>;
     partnerLogosSection: Attribute.Component<'section.partner-logos-section'>;
     sealthAppSection: Attribute.Component<'section.sealth-app-section'>;
     BenefitsSection: Attribute.Component<'section.benefits-section'>;
     sealthMadeSection: Attribute.Component<'section.sealth-made-section'>;
     sliderSection: Attribute.Component<'section.slider-section'>;
+    stepsSection: Attribute.Component<'section.steps-section'>;
+    videoSection: Attribute.Component<'section.video-section'>;
+    paperworkSection: Attribute.Component<'section.paperwork-section'>;
+    faqSection: Attribute.Component<'section.faq-section', true>;
+    ctaSection: Attribute.Component<'section.cta-section'>;
+    reminderSection: Attribute.Component<'section.reminder-section'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -7,11 +7,19 @@
   },
   "options": {},
   "attributes": {
-    "logosSection": {
-      "displayName": "Logos Section",
-      "type": "component",
-      "repeatable": true,
-      "component": "small-component.logos-section"
+    "partnerLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "text"
     }
   }
 }

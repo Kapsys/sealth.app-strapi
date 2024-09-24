@@ -45,16 +45,9 @@ export interface SmallComponentSlider extends Schema.Component {
   info: {
     displayName: 'Slider';
     icon: 'dashboard';
+    description: '';
   };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    name: Attribute.String;
-    position: Attribute.String;
-    testimonial: Attribute.Text;
-    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-  };
+  attributes: {};
 }
 
 export interface SmallComponentNewsletterSubscription extends Schema.Component {
@@ -91,11 +84,9 @@ export interface SmallComponentLogosSection extends Schema.Component {
   info: {
     displayName: 'Logos Section';
     icon: 'file';
+    description: '';
   };
-  attributes: {
-    partnerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    link: Attribute.Text;
-  };
+  attributes: {};
 }
 
 export interface SmallComponentList extends Schema.Component {
@@ -241,9 +232,16 @@ export interface SectionSliderSection extends Schema.Component {
   info: {
     displayName: 'Slider Section';
     icon: 'cog';
+    description: '';
   };
   attributes: {
-    slider: Attribute.Component<'small-component.slider', true>;
+    title: Attribute.String;
+    description: Attribute.Text;
+    photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Attribute.String;
+    position: Attribute.String;
+    testimonial: Attribute.Text;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -299,7 +297,8 @@ export interface SectionPartnerLogosSection extends Schema.Component {
     description: '';
   };
   attributes: {
-    logosSection: Attribute.Component<'small-component.logos-section', true>;
+    partnerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Attribute.Text;
   };
 }
 

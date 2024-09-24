@@ -22,7 +22,7 @@
     },
     "partnerLogosSection": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "section.partner-logos-section"
     },
     "sealthAppSection": {
@@ -81,6 +81,9 @@
       "type": "component",
       "repeatable": false,
       "component": "section.reminder-section"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

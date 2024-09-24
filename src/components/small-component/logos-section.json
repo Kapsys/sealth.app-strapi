@@ -2,22 +2,9 @@
   "collectionName": "components_small_component_logos_sections",
   "info": {
     "displayName": "Logos Section",
-    "icon": "file"
+    "icon": "file",
+    "description": ""
   },
   "options": {},
-  "attributes": {
-    "partnerLogo": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "link": {
-      "type": "text"
-    }
-  }
+  "attributes": {}
 }

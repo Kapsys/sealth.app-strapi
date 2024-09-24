@@ -2,44 +2,9 @@
   "collectionName": "components_small_component_sliders",
   "info": {
     "displayName": "Slider",
-    "icon": "dashboard"
+    "icon": "dashboard",
+    "description": ""
   },
   "options": {},
-  "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
-    },
-    "photo": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "name": {
-      "type": "string"
-    },
-    "position": {
-      "type": "string"
-    },
-    "testimonial": {
-      "type": "text"
-    },
-    "logo": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    }
-  }
+  "attributes": {}
 }

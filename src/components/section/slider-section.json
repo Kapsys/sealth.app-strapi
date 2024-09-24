@@ -2,15 +2,46 @@
   "collectionName": "components_section_slider_sections",
   "info": {
     "displayName": "Slider Section",
-    "icon": "cog"
+    "icon": "cog",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "slider": {
-      "displayName": "Slider",
-      "type": "component",
-      "repeatable": true,
-      "component": "small-component.slider"
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "testimonial": {
+      "type": "text"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

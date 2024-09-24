@@ -956,7 +956,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
   attributes: {
     slug: Attribute.UID;
     heroSection: Attribute.Component<'section.hero-section'>;
-    partnerLogosSection: Attribute.Component<'section.partner-logos-section'>;
+    partnerLogosSection: Attribute.Component<'section.partner-logos-section', true>;
     sealthAppSection: Attribute.Component<'section.sealth-app-section'>;
     BenefitsSection: Attribute.Component<'section.benefits-section'>;
     sealthMadeSection: Attribute.Component<'section.sealth-made-section'>;
@@ -967,6 +967,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     faqSection: Attribute.Component<'section.faq-section', true>;
     ctaSection: Attribute.Component<'section.cta-section'>;
     reminderSection: Attribute.Component<'section.reminder-section'>;
+    title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

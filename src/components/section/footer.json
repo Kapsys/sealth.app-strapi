@@ -27,16 +27,10 @@
       "repeatable": false,
       "component": "small-component.footer-contact"
     },
-    "newsletterSubscription": {
-      "displayName": "Newsletter Subscription ",
-      "type": "component",
-      "repeatable": false,
-      "component": "small-component.newsletter-subscription"
-    },
     "socialIcons": {
       "displayName": "Social Icons",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "small-component.social-icons"
     },
     "button": {

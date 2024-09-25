@@ -369,8 +369,7 @@ export interface SectionFooter extends Schema.Component {
     footerLogo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     footerDescription: Attribute.Text;
     footerContact: Attribute.Component<'small-component.footer-contact'>;
-    newsletterSubscription: Attribute.Component<'small-component.newsletter-subscription'>;
-    socialIcons: Attribute.Component<'small-component.social-icons'>;
+    socialIcons: Attribute.Component<'small-component.social-icons', true>;
     button: Attribute.Component<'small-component.button'>;
   };
 }

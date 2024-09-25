@@ -958,9 +958,9 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     heroSection: Attribute.Component<'section.hero-section'>;
     partnerLogosSection: Attribute.Component<'section.partner-logos-section', true>;
     sealthAppSection: Attribute.Component<'section.sealth-app-section'>;
-    BenefitsSection: Attribute.Component<'section.benefits-section'>;
+    benefitsSection: Attribute.Component<'section.benefits-section'>;
     sealthMadeSection: Attribute.Component<'section.sealth-made-section'>;
-    sliderSection: Attribute.Component<'section.slider-section'>;
+    sliderSection: Attribute.Component<'section.slider-section', true>;
     stepsSection: Attribute.Component<'section.steps-section'>;
     videoSection: Attribute.Component<'section.video-section'>;
     paperworkSection: Attribute.Component<'section.paperwork-section'>;
@@ -968,6 +968,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     ctaSection: Attribute.Component<'section.cta-section'>;
     reminderSection: Attribute.Component<'section.reminder-section'>;
     title: Attribute.String;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

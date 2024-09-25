@@ -917,6 +917,34 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiErrorPageErrorPage extends Schema.SingleType {
+  collectionName: 'error_pages';
+  info: {
+    singularName: 'error-page';
+    pluralName: 'error-pages';
+    displayName: 'Error Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'small-component.button'>;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    seo: Attribute.Component<'shared.seo'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::error-page.error-page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::error-page.error-page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    sitemap_exclude: Attribute.Boolean & Attribute.Private & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ApiGlobalGlobal extends Schema.SingleType {
   collectionName: 'globals';
   info: {
@@ -1037,6 +1065,7 @@ declare module '@strapi/types' {
       'plugin::sitemap.sitemap': PluginSitemapSitemap;
       'plugin::sitemap.sitemap-cache': PluginSitemapSitemapCache;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::error-page.error-page': ApiErrorPageErrorPage;
       'api::global.global': ApiGlobalGlobal;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::page.page': ApiPagePage;

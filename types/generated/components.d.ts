@@ -289,6 +289,18 @@ export interface SectionReminderSection extends Schema.Component {
   };
 }
 
+export interface SectionPrivacyPolicySection extends Schema.Component {
+  collectionName: 'components_section_privacy_policy_sections';
+  info: {
+    displayName: 'Privacy Policy Section';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 export interface SectionPartnerLogosSection extends Schema.Component {
   collectionName: 'components_section_partner_logos_sections';
   info: {
@@ -425,6 +437,18 @@ export interface SectionBenefitsSection extends Schema.Component {
   };
 }
 
+export interface SectionBannerSection extends Schema.Component {
+  collectionName: 'components_section_banner_sections';
+  info: {
+    displayName: 'Banner Section';
+    icon: 'dashboard';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -448,6 +472,7 @@ declare module '@strapi/types' {
       'section.sealth-made-section': SectionSealthMadeSection;
       'section.sealth-app-section': SectionSealthAppSection;
       'section.reminder-section': SectionReminderSection;
+      'section.privacy-policy-section': SectionPrivacyPolicySection;
       'section.partner-logos-section': SectionPartnerLogosSection;
       'section.paperwork-section': SectionPaperworkSection;
       'section.newsletter-section': SectionNewsletterSection;
@@ -458,6 +483,7 @@ declare module '@strapi/types' {
       'section.cta-section': SectionCtaSection;
       'section.blog-section': SectionBlogSection;
       'section.benefits-section': SectionBenefitsSection;
+      'section.banner-section': SectionBannerSection;
     }
   }
 }

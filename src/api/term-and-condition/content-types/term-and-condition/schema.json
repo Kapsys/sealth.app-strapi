@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "term_and_conditions",
+  "info": {
+    "singularName": "term-and-condition",
+    "pluralName": "term-and-conditions",
+    "displayName": "Term & Condition",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "bannerSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.banner-section"
+    },
+    "privacyPolicySection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.privacy-policy-section"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

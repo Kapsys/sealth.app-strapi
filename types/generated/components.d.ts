@@ -297,7 +297,13 @@ export interface SectionPrivacyPolicySection extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    description: Attribute.Text;
+    description: Attribute.RichText &
+      Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'toolbarBalloon';
+        }
+      >;
   };
 }
 

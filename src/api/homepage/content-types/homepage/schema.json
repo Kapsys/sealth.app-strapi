@@ -55,7 +55,7 @@
     "videoSection": {
       "displayName": "Video Section",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "section.video-section"
     },
     "paperworkSection": {

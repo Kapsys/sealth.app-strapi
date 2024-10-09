@@ -1018,7 +1018,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     sealthMadeSection: Attribute.Component<'section.sealth-made-section'>;
     sliderSection: Attribute.Component<'section.slider-section', true>;
     stepsSection: Attribute.Component<'section.steps-section'>;
-    videoSection: Attribute.Component<'section.video-section'>;
+    videoSection: Attribute.Component<'section.video-section', true>;
     paperworkSection: Attribute.Component<'section.paperwork-section'>;
     faqSection: Attribute.Component<'section.faq-section', true>;
     ctaSection: Attribute.Component<'section.cta-section'>;

@@ -9,6 +9,12 @@
   "attributes": {
     "videoUrl": {
       "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

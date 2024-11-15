@@ -1,55 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface SharedSeo extends Schema.Component {
-  collectionName: 'components_shared_seos';
-  info: {
-    displayName: 'seo';
-    icon: 'search';
-  };
-  attributes: {
-    metaTitle: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 60;
-      }>;
-    metaDescription: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        minLength: 50;
-        maxLength: 250;
-      }>;
-    metaImage: Attribute.Media<'images' | 'files' | 'videos'> & Attribute.Required;
-    metaSocial: Attribute.Component<'shared.meta-social', true>;
-    keywords: Attribute.Text;
-    metaRobots: Attribute.String;
-    structuredData: Attribute.JSON;
-    metaViewport: Attribute.String;
-    canonicalURL: Attribute.String;
-  };
-}
-
-export interface SharedMetaSocial extends Schema.Component {
-  collectionName: 'components_shared_meta_socials';
-  info: {
-    displayName: 'metaSocial';
-    icon: 'project-diagram';
-  };
-  attributes: {
-    socialNetwork: Attribute.Enumeration<['Facebook', 'Twitter']> & Attribute.Required;
-    title: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 60;
-      }>;
-    description: Attribute.String &
-      Attribute.Required &
-      Attribute.SetMinMaxLength<{
-        maxLength: 65;
-      }>;
-    image: Attribute.Media<'images' | 'files' | 'videos'>;
-  };
-}
-
 export interface SmallComponentSteps extends Schema.Component {
   collectionName: 'components_small_component_steps';
   info: {
@@ -201,6 +151,56 @@ export interface SmallComponentAddressItems extends Schema.Component {
   };
 }
 
+export interface SharedSeo extends Schema.Component {
+  collectionName: 'components_shared_seos';
+  info: {
+    displayName: 'seo';
+    icon: 'search';
+  };
+  attributes: {
+    metaTitle: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    metaDescription: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 50;
+        maxLength: 250;
+      }>;
+    metaImage: Attribute.Media<'images' | 'files' | 'videos'> & Attribute.Required;
+    metaSocial: Attribute.Component<'shared.meta-social', true>;
+    keywords: Attribute.Text;
+    metaRobots: Attribute.String;
+    structuredData: Attribute.JSON;
+    metaViewport: Attribute.String;
+    canonicalURL: Attribute.String;
+  };
+}
+
+export interface SharedMetaSocial extends Schema.Component {
+  collectionName: 'components_shared_meta_socials';
+  info: {
+    displayName: 'metaSocial';
+    icon: 'project-diagram';
+  };
+  attributes: {
+    socialNetwork: Attribute.Enumeration<['Facebook', 'Twitter']> & Attribute.Required;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    description: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 65;
+      }>;
+    image: Attribute.Media<'images' | 'files' | 'videos'>;
+  };
+}
+
 export interface SectionVideoSection extends Schema.Component {
   collectionName: 'components_section_video_sections';
   info: {
@@ -266,6 +266,7 @@ export interface SectionSealthAppSection extends Schema.Component {
   info: {
     displayName: 'Sealth App Section';
     icon: 'grid';
+    description: '';
   };
   attributes: {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
@@ -273,6 +274,7 @@ export interface SectionSealthAppSection extends Schema.Component {
     description: Attribute.Text;
     underlinedText: Attribute.String;
     appImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Attribute.String;
   };
 }
 
@@ -326,12 +328,14 @@ export interface SectionPaperworkSection extends Schema.Component {
   collectionName: 'components_section_paperwork_sections';
   info: {
     displayName: 'Paperwork Section';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
     underlinedText: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Attribute.String;
   };
 }
 
@@ -460,8 +464,6 @@ export interface SectionBannerSection extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'shared.seo': SharedSeo;
-      'shared.meta-social': SharedMetaSocial;
       'small-component.steps': SmallComponentSteps;
       'small-component.specifications': SmallComponentSpecifications;
       'small-component.social-icons': SmallComponentSocialIcons;
@@ -474,6 +476,8 @@ declare module '@strapi/types' {
       'small-component.button': SmallComponentButton;
       'small-component.benefits': SmallComponentBenefits;
       'small-component.address-items': SmallComponentAddressItems;
+      'shared.seo': SharedSeo;
+      'shared.meta-social': SharedMetaSocial;
       'section.video-section': SectionVideoSection;
       'section.steps-section': SectionStepsSection;
       'section.slider-section': SectionSliderSection;

@@ -28,6 +28,9 @@
     },
     "underlinedText": {
       "type": "string"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

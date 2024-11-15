@@ -290,6 +290,7 @@ export interface SectionReminderSection extends Schema.Component {
     title: Attribute.String;
     list: Attribute.Component<'small-component.list', true>;
     underlinedText: Attribute.String;
+    link: Attribute.String;
   };
 }
 
